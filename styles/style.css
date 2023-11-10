@@ -18,7 +18,7 @@ body {
 }
 
 .product-card {
-  width: 600px;
+  max-width: 600px;
   height: 450px;
   background-color: white;
   border-radius: 10px;
@@ -27,6 +27,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  margin-bottom: 10px;
 }
 
 .product-info {
@@ -96,4 +97,32 @@ button {
   padding-top: 15px;
   padding-bottom: 15px;
   color: white;
+}
+
+@media (max-width: 610px) {
+  .product-card {
+    flex-direction: column;
+    width: 300px;
+  }
+
+  .product-image img {
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+  }
+
+  .product-info {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 0;
+  }
+
+  .product-card {
+    height: auto;
+  }
+
+  button {
+    margin-bottom: 20px;
+  }
 }
